@@ -1,0 +1,47 @@
+SITE D'INVITATION - ANON & BLANCHE
+==================================
+Ouvrez index.html dans votre navigateur pour voir le site.
+
+PARCOURS DE L'INVITÉ
+1. La carte d'invitation (images/invitation.jpg) avec le bouton "Ouvrir"
+2. Clic sur "Ouvrir"  ->  la page NOTRE HISTOIRE (fond blanc, à lire tranquillement)
+3. Clic sur "Bienvenue dans la suite"  ->  pluie de pétales (15 s)  ->  le site
+
+STYLE
+- Cartes blanches, textes verts, détails en or.
+- Polices (dossier fonts/, fonctionnent sans connexion internet) :
+    Cormorant Garamond = textes et titres élégants
+    Great Vibes        = écriture romantique (prénoms, "nous sommes fiancés", calendrier)
+
+ANIMATIONS
+- Chaque carte, titre, photo et ligne du programme apparaît avec son propre effet (zoom, glissement,
+  bascule...) et l'animation se rejoue à chaque passage, même en remontant la page.
+- En continu : reflet doré sur les cartes, fleurs qui se balancent, prénoms dorés qui scintillent,
+  photos qui respirent, cœur du calendrier qui bat, points du programme qui pulsent.
+- Réglages : style.css, fin du fichier (sections "ANIMATIONS") ; script.js, fonction initReveal.
+- Les personnes qui ont activé "réduire les animations" sur leur téléphone voient tout sans mouvement.
+
+FICHIERS
+- index.html : tous les textes (noms, parents, horaires, programme, verset, histoire)
+- style.css  : couleurs, polices, mise en page
+- script.js  : numéro WhatsApp, date du compte à rebours, lieu, photos, vidéos,
+               durée des pétales (RAIN_MS = 15000 pour 15 secondes)
+- images/    : photos du site, la carte invitation.jpg, et histoire-haut.jpg / histoire-bas.jpg
+               (décor de la page Notre Histoire)
+- images/decor/ : autres décors prêts à l'emploi (feuilles et or, fleurs en papier, roses et alliances)
+- fonts/     : polices
+- audios/ et videos/ : musiques et vidéos
+
+OÙ MODIFIER QUOI
+- Couleurs : style.css, tout début (:root) -> --ink (vert), --gold (or), --gold-deep (or foncé)
+- Décor de la page Notre Histoire : remplacez images/histoire-haut.jpg (haut) et
+  images/histoire-bas.jpg (bas) par une autre image de même largeur
+- Texte de l'histoire : index.html, section id="story"
+- Carte d'invitation : remplacez images/invitation.jpg ; hauteur du bouton Ouvrir :
+  style.css, ".icard .iopen { top: 76.5% }"
+- Nom de l'invité sur la carte : ajoutez ?invite=Nom à la fin du lien
+- Numéro WhatsApp : script.js, ligne whatsapp:"..." (ex. "2250700000000", sans + ni espaces)
+
+POUR METTRE EN LIGNE
+Envoyez tout le dossier (index.html, style.css, script.js, fonts/, images/, audios/, videos/)
+chez un hébergeur (Netlify Drop, GitHub Pages, etc.).
